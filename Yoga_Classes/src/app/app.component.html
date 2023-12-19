@@ -1,0 +1,36 @@
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="name">Name:</label>
+    <input type="text" class="form-control" id="name" formControlName="name" required>
+  </div>
+  <div class="form-group">
+    <label for="age">Age:</label>
+    <input type="number" class="form-control" id="age" formControlName="age" [min]="18" [max]="65" required>
+  </div>
+  <div class="form-group">
+    <label for="email">Email:</label>
+    <input type="email" class="form-control" id="email" formControlName="email" required>
+  </div>
+  <div class="form-group">
+    <label for="gender">Gender:</label>
+    <select class="form-control" id="gender" formControlName="gender" required>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="other">Other</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="phone_number">Phone Number:</label>
+    <input type="text" class="form-control" id="phone_number" formControlName="phone_number" required>
+  </div>
+  <div class="form-group">
+    <label for="batch_preference">Batch Preference:</label>
+    <select class="form-control" id="batch_preference" formControlName="batch_preference" required>
+      <option value="6-7AM">6-7AM</option>
+      <option value="7-8AM">7-8AM</option>
+      <option value="8-9AM">8-9AM</option>
+      <option value="5-6PM">5-6PM</option>
+    </select>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
